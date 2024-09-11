@@ -1,0 +1,6 @@
+/* Enter your custom styles here */
+
+.blueText tr:hover span{
+    color: #00f !important;
+    /* background: linear-gradient(to right, rgba(0, 0, 255, 0.8), rgba(238, 130, 238, 0.8)) !important; */
+}

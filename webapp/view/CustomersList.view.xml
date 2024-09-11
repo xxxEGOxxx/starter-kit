@@ -1,0 +1,45 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="stk.starterkit.controller.CustomersList" displayBlock="true">
+    <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="CustomersList" 
+        showNavButton="true" navButtonPress="handleNavButtonPress" title="CompanyName">
+        
+        <headerContent>
+            <Button	text="Performance List"	press=".onPerformanceList">
+		    </Button>
+			<Button	text="Add"	press=".onAdd">
+		    </Button>
+		</headerContent>
+        <content>
+            <Carousel id="customersCarousel" loop="true">
+                <pages>
+                <Image width="90%" height="80%" id="1" src="https://i.ytimg.com/vi/4lIZ0v4viI4/maxresdefault.jpg" alt="" />
+                <Image width="90%" height="80%" id="2" src="https://i.ytimg.com/vi/4lIZ0v4viI4/maxresdefault.jpg" alt="" />
+                <Image width="90%" height="80%" id="3" src="https://i.ytimg.com/vi/4lIZ0v4viI4/maxresdefault.jpg" alt="" />
+                <Image width="90%" height="80%" id="4" src="https://i.ytimg.com/vi/4lIZ0v4viI4/maxresdefault.jpg" alt="" />
+                </pages>
+                <customLayout>
+                    <CarouselLayout id="b" visiblePagesCount="2" />
+                </customLayout>
+            </Carousel>
+            <Table items="{/Customers}" class="blueText">
+                <columns>
+                    <Column>
+                        
+                        <Label text="{i18n>companyName}"/>
+                        
+                    </Column>
+                    <Column>
+                        <Label text="{i18n>country}"/>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem type="Navigation" press="onCustomerPress">
+
+                        <Text text="{CompanyName}"/>
+                        <Text text="{Country}"/>
+
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

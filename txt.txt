@@ -1,0 +1,1 @@
+"start-mock": "fiori run --config ./ui5-mock.yaml --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#stkstarterkit-display\"",

@@ -1,0 +1,42 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="stk.starterkit.controller.CustomerDetails" displayBlock="true">
+    <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="CustomerDetails" 
+        showNavButton="true" navButtonPress="handleNavButtonPress" title="{CompanyName}">
+        <customHeader>
+            <Toolbar>
+				<Button id="backButton" type="Back" />
+				<ToolbarSpacer/>
+				<Title text="{CompanyName}" level="H2"/>
+				<ToolbarSpacer/>
+				<Button id="contactButton" text="Show contact info" press=".onContactInfoPress" type="Transparent" />
+			</Toolbar>
+        </customHeader>
+        
+        <content>
+            <Table id="customer" items="{Orders}">
+                <columns>
+                    <Column >
+                        
+                        <Label text="{i18n>Order ID}"/>
+                        
+                    </Column>
+                    <Column>
+                        <Label text="{i18n>Employee}"/>
+                    </Column>
+                    <Column>
+                        <Label text="{i18n>Order Date}"/>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem press="onCustomerPress">
+
+                        <Text text="{OrderID}"/>
+                        <Text text="{parts: [{path: 'Employee/FirstName'},{path: 'Employee/LastName'}],
+                        formatter: '.formatter.formatName'}"/>
+                        <Text text="{path: 'OrderDate', type:'sap.ui.model.type.DateTime', formatOptions:{style: 'medium'}}"/>
+
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,41 @@
+<mvc:View controllerName="stk.starterkit.controller.Master"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            
+            <Carousel id="customersCarouselA" loop="true">
+                <pages>
+                <Image width="90%" height="80%" src="https://i.ytimg.com/vi/4lIZ0v4viI4/maxresdefault.jpg" alt="" />
+                <Image width="90%" height="80%" src="https://i.ytimg.com/vi/4lIZ0v4viI4/maxresdefault.jpg" alt="" />
+                <Image width="90%" height="80%" src="https://i.ytimg.com/vi/4lIZ0v4viI4/maxresdefault.jpg" alt="" />
+                <Image width="90%" height="80%" src="https://i.ytimg.com/vi/4lIZ0v4viI4/maxresdefault.jpg" alt="" />
+                </pages>
+                <customLayout>
+                    <CarouselLayout visiblePagesCount="2" />
+                </customLayout>
+            </Carousel>
+
+            <Table items="{/Customers}">
+                <columns>
+                    <Column >
+                        <Label text="{i18n>companyName}"/>
+                        
+                    </Column>
+                    <Column >
+                        <Label  text="{i18n>country}"/>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem >
+
+                        <Text  text="{CompanyName}"/>
+                        <Text text="{Country}"/>
+
+                    </ColumnListItem>
+                </items>
+            </Table>
+
+        </content>
+    </Page>
+</mvc:View>
