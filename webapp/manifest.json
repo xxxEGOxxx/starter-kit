@@ -98,7 +98,6 @@
         "clearControlAggregation": false
       },
       "routes": [
-
         {
           "name": "CustomersList",
           "pattern": "",
@@ -129,7 +128,6 @@
         }
       ],
       "targets": {
-
         "CustomerDetails": {
           "viewType": "XML",
           "viewId": "CustomerDetails",
@@ -158,7 +156,9 @@
       "async": true,
       "id": "App"
     }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "stkstarterkit"
   }
 }
-
-
